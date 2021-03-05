@@ -10,7 +10,7 @@
     "build_id": "{{env `BUILD_ID`}}",
     "commit": "{{env `GIT_VERSION`}}",
     "feature_flags": "{{env `FEATURE_FLAGS`}}",
-    "ubuntu_sku": "{{env `UBUNTU_SKU`}}",
+    "os_sku": "{{env `OS_SKU`}}",
     "hyperv_generation": "{{env `HYPERV_GENERATION`}}",
     "container_runtime": "{{env `CONTAINER_RUNTIME`}}",
     "teleportd_plugin_download_url": "{{env `TELEPORTD_PLUGIN_DOWNLOAD_URL`}}"
@@ -25,10 +25,10 @@
       "resource_group_name": "{{user `resource_group_name`}}",
       "storage_account": "{{user `storage_account_name`}}",
       "capture_container_name": "aks-vhds",
-      "capture_name_prefix": "aks-{{user `create_time`}}",
+      "capture_name_prefix": "aks-mariner-{{user `create_time`}}",
       "os_type": "Linux",
       "os_disk_size_gb": 30,
-      "image_url": "{{env `IMAGEURL`}}",
+      "image_url": "https://{{user `storage_account_name`}}.blob.core.windows.net/system/mariner.vhd",
       "azure_tags": {
         "os": "Linux",
         "now": "{{user `create_time`}}",
