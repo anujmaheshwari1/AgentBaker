@@ -5,7 +5,7 @@ required_env_vars=(
     "IMPORT_IMAGE_SAS"
 )
 
-SETTINGS_JSON="${SETTINGS_JSON:-./packer/settings.json}"
+SETTINGS_JSON="${SETTINGS_JSON:-./vhdbuilder/packer/settings.json}"
 
 for v in "${required_env_vars[@]}"
 do
