@@ -21,4 +21,4 @@ expiry_date=$(date -u -d "10 minutes" '+%Y-%m-%dT%H:%MZ')
 sas_token=$(az storage account generate-sas --account-name $STORAGE_ACCOUNT_NAME --permissions rcw --resource-types o --services b --expiry ${expiry_date} | tr -d '"')
 destination_url="https://${STORAGE_ACCOUNT_NAME}.blob.core.windows.net/system/mariner.vhd?${sas_token}"
 
-azcopy copy $IMPORT_IMAGE_URL$IMPORT_IMAGE_SAS $destination_url
+azcopy-preview copy $IMPORT_IMAGE_URL$IMPORT_IMAGE_SAS $destination_url
