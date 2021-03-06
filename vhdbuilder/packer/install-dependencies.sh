@@ -15,6 +15,7 @@ source /home/packer/packer_source.sh
 VHD_LOGS_FILEPATH=/opt/azure/vhd-install.complete
 
 echo "Starting build on " $(date) > ${VHD_LOGS_FILEPATH}
+chmod 644 ${VHD_LOGS_FILEPATH}
 
 copyPackerFiles
 
