@@ -72,6 +72,8 @@ phases:
           -e SIG_IMAGE_NAME=${SIG_IMAGE_NAME} \
           -e SIG_IMAGE_VERSION=${SIG_IMAGE_VERSION} \
           -e TELEPORTD_PLUGIN_DOWNLOAD_URL=${TELEPORTD_PLUGIN_DOWNLOAD_URL} \
+          -e IMPORT_IMAGE_URL=${IMPORT_IMAGE_URL} \
+          -e IMPORT_IMAGE_SAS=${IMPORT_IMAGE_SAS} \
           ${CONTAINER_IMAGE} make -f packer.mk run-packer
         displayName: Building VHD
       - script: |

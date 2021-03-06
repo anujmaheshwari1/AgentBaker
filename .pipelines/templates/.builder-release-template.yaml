@@ -47,6 +47,8 @@ steps:
         -e SIG_IMAGE_VERSION=${SIG_IMAGE_VERSION} \
         -e CONTAINER_RUNTIME=${CONTAINER_RUNTIME} \
         -e TELEPORTD_PLUGIN_DOWNLOAD_URL=${TELEPORTD_PLUGIN_DOWNLOAD_URL} \
+        -e IMPORT_IMAGE_URL=${IMPORT_IMAGE_URL} \
+        -e IMPORT_IMAGE_SAS=${IMPORT_IMAGE_SAS} \
         ${CONTAINER_IMAGE} make -f packer.mk run-packer
     displayName: Building VHD
   - task: PublishPipelineArtifact@0
