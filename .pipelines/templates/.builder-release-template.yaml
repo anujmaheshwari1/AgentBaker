@@ -38,6 +38,7 @@ steps:
         -e BUILD_ID=$(Build.BuildId) \
         -e BUILD_NUMBER=$(Build.BuildNumber) \
         -e OS_SKU=$(OS_SKU) \
+        -e OS_DISTRO=${OS_DISTRO} \
         -e HYPERV_GENERATION=${HYPERV_GENERATION} \
         -e OS_TYPE="Linux" \
         -e MODE=$(MODE) \
